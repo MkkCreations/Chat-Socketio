@@ -12,6 +12,7 @@ export default function App() {
     const receiveMessage = (message) => {
       setMessages([message, ...messages]);
     };
+    console.log(socket);
 
     socket.on("message", receiveMessage);
 

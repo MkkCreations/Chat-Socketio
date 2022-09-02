@@ -31,6 +31,7 @@ io.on("connection", (socket) => {
     socket.broadcast.emit("message", {
       body,
       from: socket.id.slice(8),
+      soc: socket.data,
     });
   });
 });
